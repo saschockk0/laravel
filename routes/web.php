@@ -18,4 +18,7 @@ Route::get('/', function () {
     
 });
 Route::resource('todos', \App\Http\Controllers\TodoController::class);
-Route::get('todos/{todo}', [\App\Http\Controllers\TodoController::class,'destroy'])->name('todos.destory');
+Route::get('todos/{todo}', [\App\Http\Controllers\TodoController::class,'destroy'])->name('todos.destroy');
+Route::resource('tasks', \App\Http\Controllers\TaskController::class);
+Route::resource('teams', \App\Http\Controllers\TeamController::class);
+Route::get('teams/{team}', [\App\Http\Controllers\TeamController::class,'destroy'])->name('teams.destroy');
